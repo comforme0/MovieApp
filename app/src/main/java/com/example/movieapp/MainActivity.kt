@@ -57,8 +57,8 @@ class MainActivity : AppCompatActivity() {
                     response: Response<ResponseMovie>
                 ) {
                     val movies = response.body()?.results
-                    Toast.makeText(this@MainActivity, "Movie size = ${movies?.size}", Toast.LENGTH_SHORT).show()
-//                    recyclerView.adapter = MovieAdapter(movies!!)
+//                    Toast.makeText(this@MainActivity, "Movie size = ${movies?.size}", Toast.LENGTH_SHORT).show()
+                    recyclerView.adapter = MovieAdapter(movies!!)
                 }
             })
         }.run()
